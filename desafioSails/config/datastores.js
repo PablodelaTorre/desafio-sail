@@ -12,6 +12,10 @@
  * For more information on configuring datastores, check out:
  * https://sailsjs.com/config/datastores
  */
+  import 'dotenv/config'
+  const MONGO_PASS=process.env.MONGO_PASS
+  const MONGO_DB=process.env.MONGO_DB
+  const MONGO_USER=process.env.MONGO_USER
 
 module.exports.datastores = {
 
@@ -50,7 +54,10 @@ module.exports.datastores = {
     ***************************************************************************/
     // adapter: 'sails-mysql',
     // url: 'mysql://user:password@host:port/database',
+    
 
+    adapter: "sails-mongo",
+    url: `mongodb://${MONGO_USER}:${MONGO_PASS}@cluster0-shard-00-00.krjoq.mongodb.net:27017,cluster0-shard-00-01.krjoq.mongodb.net:27017,cluster0-shard-00-02.krjoq.mongodb.net:27017/${MONGO_DB}?ssl=true&replicaSet=atlas-23phnp-shard-0&authSource=admin&retryWrites=true&w=majority`
   },
 
 
