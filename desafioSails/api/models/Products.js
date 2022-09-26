@@ -8,7 +8,9 @@
 module.exports = {
 
   attributes: {
-
+    name:{type:'string'},
+    price:{type:'number'},
+    stock:{type:'number'}
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝

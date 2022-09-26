@@ -12,7 +12,7 @@
  * For more information on configuring datastores, check out:
  * https://sailsjs.com/config/datastores
  */
-  import 'dotenv/config'
+  require('dotenv').config()
   const MONGO_PASS=process.env.MONGO_PASS
   const MONGO_DB=process.env.MONGO_DB
   const MONGO_USER=process.env.MONGO_USER
